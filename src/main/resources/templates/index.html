@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Creche Madre Mazzarello</title>
+  <title>Creche Arco Iris</title>
 
   <!-- Bootstrap core CSS -->
   <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
@@ -20,7 +20,7 @@
 
   <!-- Custom styles for this template -->
   <link th:href="@{/css/grayscale.min.css}" rel="stylesheet">
-
+  <link rel="stylesheet" th:href="@{/css/sweetalert2.min.css}">
 </head>
 
 <body id="page-top">
@@ -44,6 +44,9 @@
             <a class="nav-link js-scroll-trigger" href="#contact">Contatos</a>
           </li>
           <div sec:authorize="isAuthenticated()">
+            <a class="nav-link js-scroll-trigger" th:href="@{/registrar}">Registrar</a>
+          </div>
+          <div sec:authorize="isAuthenticated()">
             <a class="nav-link js-scroll-trigger" th:href="@{/logout}">Sair</a>
           </div>
           <div sec:authorize="isAnonymous()">
@@ -58,13 +61,12 @@
   <header class="masthead">
     <div class="container d-flex h-100 align-items-center">
       <div class="mx-auto text-center">
-        <h1 class="mx-auto mt-2 mb-5">Creche Madre Mazzarello</h1>
-        <h2 class="text-black-100 mx-auto mt-2 mb-5">Educando crianças no presente para formar homens no futuro!</h2>
-        <a th:href="@{/creche}" class="btn btn-primary js-scroll-trigger">Atividades com Crianças</a>
-        <a th:href="@{/idosos}" class="btn btn-primary js-scroll-trigger">Atividades com Idosos</a>
-        <a th:href="@{/catequese}" class="btn btn-primary js-scroll-trigger">Catequese</a>
-        <a href="#about" class="btn btn-primary js-scroll-trigger">Oportunidades</a>
-        <a th:href="@{/noticias}" class="btn btn-primary js-scroll-trigger">Noticias</a>
+        <h1 class="mx-auto mt-2 mb-5">Creche Arco Iris</h1>
+        <h2 class="text-black-100 mx-auto mt-3 mb-5">Educando crianças no presente para formar homens no futuro!</h2>
+        <a th:href="@{/creche}" class="mx-auto mt-3 mb-5, btn btn-primary js-scroll-trigger">Atividades com Crianças</a>
+        <a th:href="@{/idosos}" class="mx-auto mt-3 mb-5, btn btn-primary js-scroll-trigger">Atividades com Idosos</a>
+        <a th:href="@{/noticias}" class="mx-auto mt-3 mb-5, btn btn-primary js-scroll-trigger">Notícias e Oportunidades</a>
+        <a th:href="@{/catequese}" class="mx-auto mt-3 mb-5, btn btn-primary js-scroll-trigger">Catequese</a>
       </div>
     </div>
   </header>
@@ -75,15 +77,15 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2 class="text-black mb-4">História da instituição</h2>
-          <p class="text-black">Madre Mazzarello tem uma história construída por muitas mãos. Em 1966, Ir. CECÍLIA
+          <p class="text-black">Arco Iris tem uma história construída por muitas mãos. Em 1966, Ir. CECÍLIA
             PEREIRA NUNES inicia, em ambientes cedidos
-            por pessoas amigas do bairro, uma Ação Social da Inspetoria Madre Mazzarello, em Nova Cintra, a pedido do
+            por pessoas amigas do bairro, uma Ação Social da Inspetoria Arco Iris, em Nova Cintra, a pedido do
             Pe. Rubens (Salesiano),
             da paróquia “Cristo Luz dos Povos”.
 
         </div>
       </div>
-      <img src="/img/creche2.jpeg" width="100%" height="100%"    alt=""> <!-- class="img-fluid" -->
+      <img src="/img/creche2.jpeg" width="100%" height="100%" alt=""> <!-- class="img-fluid" -->
     </div>
     <br>
   </section>
@@ -95,7 +97,7 @@
       <!-- Featured Project Row -->
       <div class="row align-items-center no-gutters mb-4 mb-lg-5">
         <div class="col-xl-8 col-lg-7">
-          <img class="img-fluid mb-3 mb-lg-0" src="/img/creche12.jpeg" width="100%" height="100%"  alt="">
+          <img class="img-fluid mb-3 mb-lg-0" src="/img/creche12.jpeg" width="100%" height="100%" alt="">
         </div>
         <div class="col-xl-4 col-lg-5">
           <div class="featured-text text-center text-lg-left">
@@ -123,7 +125,7 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2 class="text-black mb-4">O crescimento</h2>
-          <p class="text-black"> Em 31 de janeiro de 1986, a Creche Madre Mazzarello foi fundada como Pessoa Jurídica e
+          <p class="text-black"> Em 31 de janeiro de 1986, a Creche Arco Iris foi fundada como Pessoa Jurídica e
             elaborou-se o primeiro estatuto. Funcionava no período da tarde como Obra Social, mantida com:
             - Pequena contribuição dos alunos.
             - Ajuda de colaboradores.
@@ -135,9 +137,9 @@
       </div>
       <img src="/img/creche17.jpeg" width="100%" height="100%" class="img-fluid" alt="">
     </div>
-    <br> 
+    <br>
   </section>
-  
+
   <section id="projects" class="projects-section bg-light">
     <div class="container">
 
@@ -149,13 +151,13 @@
         <div class="col-xl-4 col-lg-5">
           <div class="featured-text text-center text-lg-left">
             <h4>História Recente</h4>
-            <p class="text-black-50 mb-0">Em setembro de 2013, as atribuições da Inspetoria Madre Mazzarello como Sócia
+            <p class="text-black-50 mb-0">Em setembro de 2013, as atribuições da Inspetoria Arco Iris como Sócia
               Efetiva passou para Paróquia São Tarcísio,
-              representada pelo Pároco, essas atribuições são de órgão Orientador da Creche Madre Mazzarello. Em junho
+              representada pelo Pároco, essas atribuições são de órgão Orientador da Creche Arco Iris. Em junho
               de 2018 a Creche passa por uma ampliação custeada pela PBH.
               E em dezembro deste mesmo ano atendíamos 282 crianças de 2 a 5 anos. Finalizamos o atendimento de horário
               parcial e deixamos de atender a faixa etária de 4 a 5 anos, seguindo as orientações da SMED.
-              Em 2019 a Creche Madre Mazzarello é autorizada pela GAFIN-PBH a atender em horário integral, 07h30min às
+              Em 2019 a Creche Arco Iris é autorizada pela GAFIN-PBH a atender em horário integral, 07h30min às
               16h30min, 170 crianças da faixa etária de 01 a 03 anos.</p>
           </div>
         </div>
@@ -183,17 +185,18 @@
     <input type="radio" name="carousel" id="carousel2" />
     <input type="radio" name="carousel" id="carousel3" />
     <input type="radio" name="carousel" id="carousel4" />
+    <input type="radio" name="carousel" id="carousel5" />
 
-   
+
     <main class="carousel__stage">
       <aside class="carousel__item">
-        <img class="carousel__image" src="/img/estrutura.jpg" width="70%" height="60%"  alt="" />
+        <img class="carousel__image" src="/img/estrutura.jpg" width="70%" height="60%" alt="" />
         <label for="carousel2" class="carousel__next"></label>
       </aside>
 
       <aside class="carousel__item">
         <label for="carousel1" class="carousel__prev"></label>
-        <img class="carousel__image" src="/img/creche18.jpeg"  width="50%" height="50%" alt="" />
+        <img class="carousel__image" src="/img/creche18.jpeg" width="50%" height="50%" alt="" />
         <label for="carousel3" class="carousel__next"></label>
       </aside>
 
@@ -202,9 +205,15 @@
         <img class="carousel__image" src="/img/creche16.jpeg" alt="" />
         <label for="carousel4" class="carousel__next"></label>
       </aside>
-
+      
       <aside class="carousel__item">
         <label for="carousel3" class="carousel__prev"></label>
+        <img class="carousel__image" src="/img/estrutura2.jpg" alt="" />
+        <label for="carousel5" class="carousel__next"></label>
+      </aside>
+
+      <aside class="carousel__item">
+        <label for="carousel4" class="carousel__prev"></label>
         <img class="carousel__image" src="/img/creche11.jpeg" alt="" />
       </aside>
 
@@ -219,10 +228,41 @@
           <br><br>
           <i class="far fa-paper-plane fa-2x mb-2 text-black"></i>
           <h2 class="text-black mb-5">Nos mande uma mensagem!</h2>
-          <form class="form-inline d-flex">
-            <textarea rows="4" cols="20 " class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
-              placeholder="O que você deseja nos dizer?"></textarea>
-            <button type="submit" class="btn btn-primary mx-auto">Enviar</button>
+          <form id="enviarMensagem">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input class="form-control" id="nome" type="text" placeholder="Nome" required>
+            </div>
+            <div class="form-group">
+              <label for="assunto">Assunto</label>
+              <input class="form-control" id="assunto" type="text" placeholder="Assunto" required>
+            </div>
+            <div class="form-group">
+              <label for="contato">Contato</label>
+              <input class="form-control" id="contato" type="text" placeholder="Email e/ou Telefone" required>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea rows="4" cols="20 " id="mensagem" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+                placeholder="O que você deseja nos dizer?" required></textarea>
+            </div>
+            <button type="submit" id="enviarEmail" class="btn btn-primary mx-auto">Enviar</button>
+          </form>
+          <br><br>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+          <h3 class="text-black mb-5">Faça uma doação!</h3>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick" />
+            <input type="hidden" name="hosted_button_id" value="QF9X9QHQ7T7SA" />
+            <input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif" border="0"
+              name="submit" title="PayPal - The safer, easier way to pay online!"
+              alt="Faça doações com o botão do PayPal" />
+            <img alt="" border="0" src="https://www.paypal.com/pt_BR/i/scr/pixel.gif" width="1" height="1" />
           </form>
           <br><br>
         </div>
@@ -255,7 +295,7 @@
               <h4 class="text-uppercase m-0">Email</h4>
               <hr class="my-4">
               <div class="small text-black-50">
-                <a href="#">A confirmar@gmail.com</a>
+                <a href="#">contatocrechearcoiris@gmail.com</a>
               </div>
             </div>
           </div>
@@ -273,9 +313,11 @@
         </div>
       </div>
 
-      <div target="_blank" rel="noopener noreferrer" href="https://www.facebook.com"  class="social d-flex justify-content-center">
+      <div target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/cheche.madremazzarello.3"
+        class="social d-flex justify-content-center">
 
-        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com" class="mx-2">
+        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/cheche.madremazzarello.3"
+          class="mx-2">
           <i class="fab fa-facebook-f"></i>
         </a>
       </div>
@@ -286,10 +328,31 @@
   <!-- Footer -->
   <footer class="bg-black small text-center text-white-50">
     <div class="container">
-      Copyright &copy; Creche Madre Mazarrello
+      Copyright &copy; Creche Arco Iris
     </div>
   </footer>
 
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary">Salvar mudanças</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Bootstrap core JavaScript -->
   <script src="/vendor/jquery/jquery.min.js"></script>
@@ -300,7 +363,9 @@
 
   <!-- Custom scripts for this template -->
   <script src="/js/grayscale.min.js"></script>
-
+  <script src="/js/sendEmail.js"></script>
+  <script src="/js/sweetalert2.min.js"></script>
 
 </body>
+
 </html>
