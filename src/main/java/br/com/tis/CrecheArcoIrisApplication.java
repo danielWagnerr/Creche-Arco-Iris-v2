@@ -27,4 +27,18 @@ public class CrecheArcoIrisApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		
 	}
+
+	@Autowired
+	private CrecheCryptography crecheCrypto;
+	
+	private Crypto main;
+
+	public static void crypto() {
+		DoCrypto(crecheCrypto)
+	}
+
+	public void run(String... args) throws Exception {
+		
+	}
+
 }
